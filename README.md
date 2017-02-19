@@ -55,6 +55,7 @@ class Panel extends JPanel{
 		MenuL.add(MenuL2);
 
 //Selector de Fuentes
+
 		StyledEditorKit style = new StyledEditorKit();
 		
 		JComboBox fuentes = new JComboBox();
