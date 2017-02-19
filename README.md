@@ -44,7 +44,7 @@ class Panel extends JPanel{
 	
 	public Panel(){
 		
-//Layouts----------------------------------------------------------------------------------------------------
+//Layouts
 		setLayout(new BorderLayout());
 		JPanel MenuL = new JPanel(new GridLayout(2,1));
 		JMenuBar MenuL1 = new JMenuBar();
@@ -53,8 +53,8 @@ class Panel extends JPanel{
 		JScrollPane scrol = new JScrollPane(area);
 		MenuL.add(MenuL1);
 		MenuL.add(MenuL2);
-//---------------------------------------------------------------------------------------------------------
-//Selector-de-Fuentes-----------------------------------------------------------------------------
+
+//Selector de Fuentes
 		StyledEditorKit style = new StyledEditorKit();
 		
 		JComboBox fuentes = new JComboBox();
@@ -73,8 +73,8 @@ class Panel extends JPanel{
 		});
 		
 		MenuL2.add(fuentes);
-//-------------------------------------------------------------------------------------------------------
-//Selector-de-tamaño-------------------------------------------------------------------------------------
+
+//Selector de tamaño
 		JSpinner tamaño = new JSpinner(new SpinnerNumberModel(12,1,72,2));
 		tamaño.setPreferredSize(new Dimension(40,20));
 		
@@ -85,8 +85,8 @@ class Panel extends JPanel{
 			}
 		});
 		MenuL2.add(tamaño);	
-//------------------------------------------------------------------------------------------------------
-//Selector de color-----------------------------------------------------------------------------------------------
+		
+//Selector de color
 		colores = new JComboBox();
 
 		class colorus{
@@ -141,8 +141,8 @@ class Panel extends JPanel{
 		});
 
 		MenuL2.add(colores);
-//------------------------------------------------------------------------------------------------------------------
-//Modificadores de apariencia del texto-------------------------------------------------------------------------
+
+//Modificadores de apariencia del texto
 		JCheckBox Negrita = new JCheckBox("Negrita");
 		JCheckBox Cursiva = new JCheckBox("Cursiva");
 				
@@ -162,8 +162,8 @@ class Panel extends JPanel{
 				
 		MenuL2.add(Negrita);
 		MenuL2.add(Cursiva);
-//--------------------------------------------------------------------------------------------------------------
-//boton ayuda--------------------------------------------------------------------------------------------------
+
+//boton ayuda
 		JMenu ayuda = new JMenu("Ayuda");
 		
 		JMenuItem acercade = new JMenuItem("Acerca de",new ImageIcon(ClassLoader.getSystemResource("imgprotext/acercade.gif")));
@@ -192,8 +192,8 @@ class Panel extends JPanel{
 		});
 		ayuda.add(acercade);
 		MenuL1.add(ayuda);
-//---------------------------------------------------------------------------------------------------------------
-//Añadir los elementos al panel-------------------------------------------------------------------------------------
+
+//Añadir los elementos al panel
 		add(scrol, BorderLayout.CENTER);
 		add(MenuL,BorderLayout.NORTH);
 	}//cierro constructor
